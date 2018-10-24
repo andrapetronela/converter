@@ -42,12 +42,15 @@ body {
 }
 
 #pounds {
-    height: 2em;
+    height: 2.5em;
     width: 10rem;
     border-radius: 8px;
     border: none;
     padding: .8rem;
-    background: #cac9d0;
+    background: #FF941C;
+    color: #353843;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
 
 #pounds:focus {
@@ -62,14 +65,16 @@ input[type=number]::-webkit-outer-spin-button {
 #calculate {
     margin-left: 2em;
     border: none;
-    padding: .5em 2em;
+    height: 4rem;
+    width: 6rem;
     background: #07b9f9;
-    color: #535258;
+    color: #353843;
+    border-radius: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-radius: 8px;
     cursor: pointer;
     transition: background .5s;
+    font-weight: 600;
 }
 
 #calculate:hover {
