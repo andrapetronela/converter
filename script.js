@@ -4,7 +4,7 @@ function convert() {
     /* 
     // pounds to kilos
     */
-    let pounds = parseInt(document.querySelector('#pounds').value);
+    let pounds = Number(document.querySelector('#pounds').value);
     let result = pounds * 0.45359237;
     kilos.textContent = `${result.toFixed(3)} kilograms`;
     
@@ -12,7 +12,7 @@ function convert() {
     // check positive input
     */
     function checkPositiveInput() {
-        if (pounds < 1) {
+        if (pounds < 0) {
             kilos.textContent = 'Please enter a number greater than 0.';
         }
     }
