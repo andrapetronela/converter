@@ -5,25 +5,19 @@
 }
 
 body {
-    background: #0e0f16;
+    background: #3c3e4b;
     font-family: sans-serif;
     color: #cac9d0;
     overflow-x: hidden;
 }
 
-.title {
-    font-size: 1.7rem;
-    font-weight: 300;
-    text-align: center;
-    margin-top: 2rem;
-}
-
 .container {
-    margin: 1em auto;
+    margin: 4em auto;
     height: 80vh;
     width: 50vw;
-    background: #32364b;
+    background: #323441;
     border-radius: 8px;
+    border: solid 8px #454551;
 }
 
 .converter {
@@ -43,13 +37,12 @@ body {
 
 #pounds {
     height: 2.5em;
-    width: 10rem;
     border-radius: 8px;
     border: none;
     padding: .8rem;
-    background: #FF941C;
-    color: #353843;
-    font-weight: 600;
+    background: #454551;
+    color: #f0f0f0;
+    font-weight: 300;
     font-size: 1.2rem;
 }
 
@@ -63,37 +56,84 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #calculate {
-    margin-left: 2em;
     border: none;
     height: 4rem;
     width: 6rem;
-    background: #07b9f9;
+    background: #0be8fe;
     color: #353843;
-    border-radius: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
-    transition: background .5s;
+    transition: all .5s;
     font-weight: 600;
 }
 
 #calculate:hover {
-    background: #0799ce;
+    background: #16a8b8;
+    color: #fff;
+}
+
+#reset {
+    border: none;
+    height: 4rem;
+    width: 6rem;
+    background: #c63efa;
+    color: #353843;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .5s;
+    font-weight: 600;
+    margin-left: .5rem;
+}
+
+#reset:hover {
+    background: #53346c;
+    color: #f0f0f0;
 }
 
 #kilos {
-    height: 2em;
-    width: 20em;
-    margin-top: -10em;
+    height: 2.5em;
+    color: #5c7cff;
+    margin-top: -4em;
     text-align: center;
+    line-height: 2.5em;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.6em;
+    letter-spacing: 1px;
 }
 
-@media only screen and (max-width: 1000px) {
+.selection {
+    height: 2.5em;
+    width: 15rem;
+    border-radius: 8px;
+    border: none;
+    padding: .8rem;
+    margin-right: .5rem;
+    background: #454551;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.selection:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 1070px) {
     .container {
-        width: 90vw;
+        width: 95vw;
     }
 }
 
 ::selection {
-    background: #4d4c5c;
+    background: rgba(39, 194, 240, 0.47);
+}
+
+::placeholder {
+    color: #d3d2d2;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 2px;
 }

@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Converter</title>
-    <link href="style.css" rel="stylesheet">
-</head>
-<body>
-  <h1 class="title">Pound to kilogram converter</h1>
-  <main class="container">
-    <section class="converter">
-      <label class="pounds">
-        Pounds
-        <input type="number" id="pounds" min="1">
-        <input id="calculate" type="button" value="Convert">
-      </label>
-      <div id="kilo"></div>
-      <div id="kilos"></div>
-    </section>   
-  </main>
-  <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Converter</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <main class="container">
+            <section class="converter">
+                <div class="pounds">
+                    <select class="selection">
+                        <option value="pounds">Pounds</option>
+                        <option value="kilos">Kilograms</option>
+                    </select>
+                    <input type="number" id="pounds" min="1" placeholder="Enter your number">
+                </div>
+                <div>
+                    <input id="calculate" type="button" value="Convert">
+                    <input id="reset" type="button" value="Reset">
+                </div>
+                <div id="kilo"></div>
+                <div id="kilos"></div>
+            </section>   
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>
