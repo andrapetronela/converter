@@ -31,10 +31,6 @@ body {
     margin: auto;
 }
 
-.select_field:focus {
-    outline: none;
-}
-
 #userInput {
     height: 2.5em;
     border-radius: 8px;
@@ -47,7 +43,7 @@ body {
 }
 
 #userInput:focus {
-    outline: none;
+    outline: 1px solid #5a5a5a;
 }
 
 input[type=number]::-webkit-inner-spin-button, 

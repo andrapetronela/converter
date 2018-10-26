@@ -1,2 +1,3 @@
 # kilos_converter
-Pounds to kilograms converter
+
+Converter calculator. You can select between kg / lbs / st / oz. 
