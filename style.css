@@ -35,7 +35,7 @@ body {
     outline: none;
 }
 
-#pounds {
+#userInput {
     height: 2.5em;
     border-radius: 8px;
     border: none;
@@ -46,7 +46,7 @@ body {
     font-size: 1.2rem;
 }
 
-#pounds:focus {
+#userInput:focus {
     outline: none;
 }
 

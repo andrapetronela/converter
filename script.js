@@ -4,29 +4,26 @@ function convert() {
     /* 
     // pounds to kilos
     */
-    let pounds = Number(document.querySelector('#pounds').value);
-    let result = pounds * 0.45359237;
+    let userInput = Number(document.querySelector('#userInput').value);
+    let result = userInput * 0.45359237;
     kilos.textContent = `${result.toFixed(3)} kilograms`;
     
     /* 
     // check positive input
     */
     function checkPositiveInput() {
-        if (pounds < 0) {
+        if (userInput < 0) {
             kilos.textContent = 'Please enter a number greater than 0.';
         }
     }
     
     checkPositiveInput();
-        if (pounds == null || pounds == '') {
-            kilos.style.width = 0;
-        } 
     
     /* 
     // check input
     */
     function checkInput() {
-        if (pounds == null || pounds == '') {
+        if (userInput == null || userInput == '') {
             kilos.textContent = 'Please enter a number';
 
         }
@@ -39,21 +36,21 @@ function convert() {
     // kilos to pounds
     */
     if (selection.value == 'kilos') {
-        result = pounds * 2.20462262185;
+        result = userInput * 2.20462262185;
         kilos.textContent = `${result.toFixed(4)} pounds`;
         checkPositiveInput();
     }
 }
 
-let pounds = document.querySelector('#pounds');
-pounds.addEventListener('keyup',function(e){
+let userInput = document.querySelector('#userInput');
+userInput.addEventListener('keyup',function(e){
     if (e.keyCode === 13) {
         convert();
-    } if (e.keyCode === 13 && pounds.value == '') {
+    } if (e.keyCode === 13 && userInput.value == '') {
         kilos.textContent = 'Please enter a number.'
     }
     
-    else if (pounds.value == null || pounds.value == '') {
+    else if (userInput.value == null || userInput.value == '') {
         kilos.textContent = '';
     }
 });
@@ -66,6 +63,7 @@ let reset = document.querySelector('#reset');
 reset.addEventListener('click', resetInput);
 
 function resetInput() {
-    pounds.value = '';
+    userInput.value = '';
     kilos.textContent = '';
 }
+ 
