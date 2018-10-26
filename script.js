@@ -6,7 +6,7 @@ function convert() {
     */
     let userInput = Number(document.querySelector('#userInput').value);
     let result = userInput * 0.45359237;
-    finalResult.textContent = `${result.toFixed(3)} kilograms`;
+    finalResult.textContent = `${result.toFixed(3)} kg`;
     
     /* 
     // check positive input
@@ -37,7 +37,7 @@ function convert() {
     */
     if (selection.value == 'kilosToPounds') {
         result = userInput * 2.20462262185;
-        finalResult.textContent = `${result.toFixed(4)} pounds`;
+        finalResult.textContent = `${result.toFixed(3)} lbs`;
         checkPositiveInput();
     }
     
@@ -46,13 +46,25 @@ function convert() {
     */ 
     if (selection.value == 'kilosToStones') {
         result = userInput * 0.1574730444;
-        finalResult.textContent = `${result.toFixed(10)} stones`;
+        finalResult.textContent = `${result.toFixed(3)} st`;
         checkPositiveInput();
     }
     
     if (selection.value == 'stonesToKilos') {
         result = userInput / 0.1574730444;
-        finalResult.textContent = `${result.toFixed(4)} kilograms`;
+        finalResult.textContent = `${result.toFixed(3)} kg`;
+        checkPositiveInput();
+    }
+    
+    if (selection.value == 'kilosToOunce') {
+        result = userInput / 0.02834952;
+        finalResult.textContent = `${result.toFixed(3)} oz`;
+        checkPositiveInput();
+    }
+    
+    if (selection.value == 'ouncesToKilos') {
+        result = userInput * 0.02834952;
+        finalResult.textContent = `${result.toFixed(3)} kg`;
         checkPositiveInput();
     }
 }
