@@ -1,4 +1,4 @@
-let kilos = document.querySelector('#kilos');
+let finalResult = document.querySelector('#finalResult');
 
 function convert() {
     /* 
@@ -6,14 +6,14 @@ function convert() {
     */
     let userInput = Number(document.querySelector('#userInput').value);
     let result = userInput * 0.45359237;
-    kilos.textContent = `${result.toFixed(3)} kilograms`;
+    finalResult.textContent = `${result.toFixed(3)} kilograms`;
     
     /* 
     // check positive input
     */
     function checkPositiveInput() {
         if (userInput < 0) {
-            kilos.textContent = 'Please enter a number greater than 0.';
+            finalResult.textContent = 'Please enter a number greater than 0.';
         }
     }
     
@@ -24,7 +24,7 @@ function convert() {
     */
     function checkInput() {
         if (userInput == null || userInput == '') {
-            kilos.textContent = 'Please enter a number';
+            finalResult.textContent = 'Please enter a number';
 
         }
     }
@@ -35,26 +35,47 @@ function convert() {
     /* 
     // kilos to pounds
     */
-    if (selection.value == 'kilos') {
+    if (selection.value == 'kilosToPounds') {
         result = userInput * 2.20462262185;
-        kilos.textContent = `${result.toFixed(4)} pounds`;
+        finalResult.textContent = `${result.toFixed(4)} pounds`;
+        checkPositiveInput();
+    }
+    
+    /*
+    // kilos To Stones
+    */ 
+    if (selection.value == 'kilosToStones') {
+        result = userInput * 0.1574730444;
+        finalResult.textContent = `${result.toFixed(10)} stones`;
+        checkPositiveInput();
+    }
+    
+    if (selection.value == 'stonesToKilos') {
+        result = userInput / 0.1574730444;
+        finalResult.textContent = `${result.toFixed(4)} kilograms`;
         checkPositiveInput();
     }
 }
 
+/*
+// Keyboard interaction
+*/
 let userInput = document.querySelector('#userInput');
-userInput.addEventListener('keyup',function(e){
+userInput.addEventListener('keyup', function(e){
     if (e.keyCode === 13) {
         convert();
     } if (e.keyCode === 13 && userInput.value == '') {
-        kilos.textContent = 'Please enter a number.'
+        finalResult.textContent = 'Please enter a number.'
     }
     
     else if (userInput.value == null || userInput.value == '') {
-        kilos.textContent = '';
+        finalResult.textContent = '';
     }
 });
 
+/* 
+// Buttons
+*/
 let calculate = document.querySelector('#calculate');
 calculate.addEventListener('click', convert);
 
@@ -64,6 +85,6 @@ reset.addEventListener('click', resetInput);
 
 function resetInput() {
     userInput.value = '';
-    kilos.textContent = '';
+    finalResult.textContent = '';
 }
  

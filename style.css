@@ -27,11 +27,11 @@ body {
     height: 90%;
 }
 
-.pounds {
+.select_field {
     margin: auto;
 }
 
-.pounds:focus {
+.select_field:focus {
     outline: none;
 }
 
@@ -92,7 +92,7 @@ input[type=number]::-webkit-outer-spin-button {
     color: #f0f0f0;
 }
 
-#kilos {
+#finalResult {
     height: 2.5em;
     color: #5c7cff;
     margin-top: -4em;
