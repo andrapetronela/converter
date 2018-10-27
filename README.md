@@ -1,3 +1,3 @@
 # Converter calculator. 
 
-You can select between kg / lbs / st / oz. 
+You can select between kg / lbs / st / oz / g. 

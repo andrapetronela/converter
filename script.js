@@ -49,21 +49,46 @@ function convert() {
         finalResult.textContent = `${result.toFixed(3)} st`;
         checkPositiveInput();
     }
-    
+     /*
+    // stone To kilo
+    */
     if (selection.value == 'stonesToKilos') {
         result = userInput / 0.1574730444;
         finalResult.textContent = `${result.toFixed(3)} kg`;
         checkPositiveInput();
     }
-    
+    /*
+    // kilos To ounce
+    */
     if (selection.value == 'kilosToOunce') {
         result = userInput / 0.02834952;
         finalResult.textContent = `${result.toFixed(3)} oz`;
         checkPositiveInput();
     }
     
+    /*
+    // ounce To kilos
+    */
     if (selection.value == 'ouncesToKilos') {
         result = userInput * 0.02834952;
+        finalResult.textContent = `${result.toFixed(3)} kg`;
+        checkPositiveInput();
+    }
+    
+    /*
+    // kilos To gram
+    */
+    if (selection.value == 'kilosToGram') {
+        result = userInput * 1000;
+        finalResult.textContent = `${result} g`;
+        checkPositiveInput();
+    }
+    
+    /*
+    // gram To kilos
+    */
+    if (selection.value == 'gramToKilos') {
+        result = userInput / 1000;
         finalResult.textContent = `${result.toFixed(3)} kg`;
         checkPositiveInput();
     }
