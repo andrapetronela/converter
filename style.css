@@ -131,6 +131,9 @@ input[type=number]::-webkit-outer-spin-button {
     #userInput {
         width: 15rem;
     }
+    #finalResult {
+        margin-top: -2em;
+    }
 }
 
 ::selection {
