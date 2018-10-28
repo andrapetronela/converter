@@ -29,7 +29,6 @@ function convert() {
         }
     }
     checkInput();
-
     let selection = document.querySelector('.selection');
 
     /* 
@@ -103,9 +102,7 @@ userInput.addEventListener('keyup', function(e){
         convert();
     } if (e.keyCode === 13 && userInput.value == '') {
         finalResult.textContent = 'Please enter a number.'
-    }
-    
-    else if (userInput.value == null || userInput.value == '') {
+    } else if (userInput.value == null || userInput.value == '') {
         finalResult.textContent = '';
     }
 });
