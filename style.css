@@ -53,6 +53,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 #calculate {
     border: none;
+    border-radius: 5px;
     height: 4rem;
     width: 6rem;
     background: #0be8fe;
@@ -71,6 +72,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 #reset {
     border: none;
+    border-radius: 5px;
     height: 4rem;
     width: 6rem;
     background: #c63efa;
